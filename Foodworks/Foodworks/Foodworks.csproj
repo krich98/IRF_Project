@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\CartButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Entities\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -58,6 +61,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UcAboutUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcAboutUs.Designer.cs">
+      <DependentUpon>UcAboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcHome.Designer.cs">
+      <DependentUpon>UcHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UcPizza.cs">
       <SubType>UserControl</SubType>
     </Compile>

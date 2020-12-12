@@ -73,10 +73,33 @@ namespace Foodworks.UserControls
                 lblLeiras.Text ="Leírás: " + pizzak[i].Leiras;
                 lblLeiras.Left = kepmeret + 30;
                 lblLeiras.Top = i * (kepmeret + 20) + 30;
-                lblLeiras.Font = new Font("Times New Roman", 12);
+                lblLeiras.Font = new Font("Century", 12);
                 lblLeiras.Width = 500;
                 this.Controls.Add(lblLeiras);
+
+                Label lblAr = new Label();
+                lblAr.Text = "Ár: " + pizzak[i].Ar.ToString() +" Ft";
+                lblAr.Left = kepmeret + 30;
+                lblAr.Top = i * (kepmeret + 20) + 60;
+                lblAr.Font = new Font("Century", 12);
+                lblAr.Width = 500;
+                this.Controls.Add(lblAr);
+
+                CartButton btnCart = new CartButton();
+                btnCart.Tag = i;
+                btnCart.Top = i * (kepmeret + 20) + 90;
+                btnCart.Left = kepmeret + 30;
+                btnCart.ID = i;
+                this.Controls.Add(btnCart);
+                btnCart.MouseClick += BtnCart_MouseClick;
+
+
             }
+        }
+
+        private void BtnCart_MouseClick(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }

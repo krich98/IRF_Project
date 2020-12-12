@@ -23,18 +23,27 @@ namespace Foodworks
             panel3.Visible = true;
 
             panel1.Width = this.Right -20;
+
+            PictureBox logo = new PictureBox();
+            logo.Left = 0;
+            logo.Top = 15;
+            logo.BackgroundImage = Image.FromFile("Files/logo_transparent.png");
+            logo.Width = 200;
+            logo.Height = 200;
+            logo.BackgroundImageLayout = ImageLayout.Stretch;
+            this.Controls.Add(logo);
             
 
 
         }
-       public void Buttonok()
-       { 
-            
-       }
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
-
+            UcHome ucHome = new UcHome();
+            panel3.Height = ucHome.meret;
+            panel3.Controls.Clear();
+            panel3.Controls.Add(ucHome);
+            ucHome.Dock = DockStyle.Fill;
         }
 
         private void MenuBtn_Click(object sender, EventArgs e)

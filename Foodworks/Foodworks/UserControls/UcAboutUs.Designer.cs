@@ -1,7 +1,7 @@
 ﻿
 namespace Foodworks.UserControls
 {
-    partial class UcPizza
+    partial class UcAboutUs
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,17 +29,8 @@ namespace Foodworks.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // UcPizza
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
-            this.Name = "UcPizza";
-            this.Size = new System.Drawing.Size(651, 335);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

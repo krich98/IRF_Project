@@ -11,6 +11,7 @@ namespace Foodworks.Entities
 {
     class CustomButton : Button
     {
+        public int ID { get; set; }
         public CustomButton(Color color)
         {
             FlatStyle = FlatStyle.Flat;
@@ -26,6 +27,7 @@ namespace Foodworks.Entities
             Font = new Font("Microsoft Sans Serif", 25);
             ForeColor = Color.White;
         }
+        
         
     }
 }

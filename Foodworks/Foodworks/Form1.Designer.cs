@@ -59,21 +59,22 @@ namespace Foodworks
             // panel3
             // 
             this.panel3.AutoScroll = true;
-            this.panel3.Location = new System.Drawing.Point(12, 71);
+            this.panel3.Location = new System.Drawing.Point(207, 71);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1334, 553);
+            this.panel3.Size = new System.Drawing.Size(1139, 553);
             this.panel3.TabIndex = 1;
             // 
             // AboutUsBtn
             // 
             this.AboutUsBtn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.AboutUsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AboutUsBtn.FlatAppearance.BorderSize = 0;
             this.AboutUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AboutUsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.AboutUsBtn.ForeColor = System.Drawing.Color.White;
             this.AboutUsBtn.Location = new System.Drawing.Point(900, 0);
             this.AboutUsBtn.Name = "AboutUsBtn";
-            this.AboutUsBtn.Size = new System.Drawing.Size(450, 50);
+            this.AboutUsBtn.Size = new System.Drawing.Size(450, 51);
             this.AboutUsBtn.TabIndex = 3;
             this.AboutUsBtn.Text = "About Us";
             this.AboutUsBtn.UseVisualStyleBackColor = false;
@@ -82,13 +83,14 @@ namespace Foodworks
             // MenuBtn
             // 
             this.MenuBtn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.MenuBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuBtn.FlatAppearance.BorderSize = 0;
             this.MenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.MenuBtn.ForeColor = System.Drawing.Color.White;
             this.MenuBtn.Location = new System.Drawing.Point(450, 0);
             this.MenuBtn.Name = "MenuBtn";
-            this.MenuBtn.Size = new System.Drawing.Size(450, 50);
+            this.MenuBtn.Size = new System.Drawing.Size(450, 51);
             this.MenuBtn.TabIndex = 2;
             this.MenuBtn.Text = "Menu";
             this.MenuBtn.UseVisualStyleBackColor = false;
@@ -97,13 +99,14 @@ namespace Foodworks
             // HomeBtn
             // 
             this.HomeBtn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.HomeBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.HomeBtn.FlatAppearance.BorderSize = 0;
             this.HomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.HomeBtn.ForeColor = System.Drawing.Color.White;
             this.HomeBtn.Location = new System.Drawing.Point(0, 0);
             this.HomeBtn.Name = "HomeBtn";
-            this.HomeBtn.Size = new System.Drawing.Size(450, 50);
+            this.HomeBtn.Size = new System.Drawing.Size(450, 51);
             this.HomeBtn.TabIndex = 1;
             this.HomeBtn.Text = "Home";
             this.HomeBtn.UseVisualStyleBackColor = false;
@@ -114,8 +117,8 @@ namespace Foodworks
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1347, 968);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1347, 614);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

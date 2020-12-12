@@ -17,9 +17,26 @@ namespace Foodworks
         {
             InitializeComponent();
 
+
         }
        public void Buttonok()
        { 
+            
        }
+
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AboutUsBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

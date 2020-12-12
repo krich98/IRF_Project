@@ -17,6 +17,14 @@ namespace Foodworks.Entities
             FlatAppearance.BorderSize = 0;
             Font = new Font("Microsoft Sans Serif", 25);
             BackColor = color;
+            ForeColor = Color.White;
+        }
+        public CustomButton()
+        {
+            FlatStyle = FlatStyle.Flat;
+            FlatAppearance.BorderSize = 0;
+            Font = new Font("Microsoft Sans Serif", 25);
+            ForeColor = Color.White;
         }
         
     }

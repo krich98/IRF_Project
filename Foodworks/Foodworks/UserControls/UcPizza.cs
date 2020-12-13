@@ -19,10 +19,10 @@ namespace Foodworks.UserControls
         public UcPizza()
         {
             InitializeComponent();
-            GetPizzas();
-            UIRajzolas();
+            //GetPizzas();
+            //UIRajzolas();
         }
-        public void GetPizzas()
+        void GetPizzas()
         {
             string path = "Files/Pizzak.csv";
             
@@ -44,7 +44,7 @@ namespace Foodworks.UserControls
             }
             
         }
-        public void UIRajzolas()
+        void UIRajzolas()
         {
             int kepmeret = 175;
             meret = 0;

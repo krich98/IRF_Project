@@ -66,12 +66,14 @@ namespace Foodworks
             // 
             // AboutUsBtn
             // 
+            this.AboutUsBtn.AutoSize = true;
             this.AboutUsBtn.BackColor = System.Drawing.SystemColors.HotTrack;
             this.AboutUsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AboutUsBtn.FlatAppearance.BorderSize = 0;
             this.AboutUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AboutUsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.AboutUsBtn.ForeColor = System.Drawing.Color.White;
+            this.AboutUsBtn.ID = 0;
             this.AboutUsBtn.Location = new System.Drawing.Point(900, 0);
             this.AboutUsBtn.Name = "AboutUsBtn";
             this.AboutUsBtn.Size = new System.Drawing.Size(450, 51);
@@ -82,12 +84,14 @@ namespace Foodworks
             // 
             // MenuBtn
             // 
-            this.MenuBtn.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.MenuBtn.AutoSize = true;
+            this.MenuBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.MenuBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuBtn.FlatAppearance.BorderSize = 0;
             this.MenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.MenuBtn.ForeColor = System.Drawing.Color.White;
+            this.MenuBtn.ID = 0;
             this.MenuBtn.Location = new System.Drawing.Point(450, 0);
             this.MenuBtn.Name = "MenuBtn";
             this.MenuBtn.Size = new System.Drawing.Size(450, 51);
@@ -98,12 +102,14 @@ namespace Foodworks
             // 
             // HomeBtn
             // 
+            this.HomeBtn.AutoSize = true;
             this.HomeBtn.BackColor = System.Drawing.SystemColors.HotTrack;
             this.HomeBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.HomeBtn.FlatAppearance.BorderSize = 0;
             this.HomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.HomeBtn.ForeColor = System.Drawing.Color.White;
+            this.HomeBtn.ID = 0;
             this.HomeBtn.Location = new System.Drawing.Point(0, 0);
             this.HomeBtn.Name = "HomeBtn";
             this.HomeBtn.Size = new System.Drawing.Size(450, 51);
@@ -122,9 +128,11 @@ namespace Foodworks
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "KRICH\'S FOODWORKS";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

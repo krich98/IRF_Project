@@ -9,28 +9,23 @@ namespace Foodworks.Entities
     
     class Rendeles
     {
-        public List<Tetel> tetelek = new List<Tetel>();
-        private int _szallitasiKoltseg;
+        public static List<Tetel> tetelek = new List<Tetel>();
+        private int _szallitasiKoltseg = 0;
         public Rendeles()
         {
-
+            
         }
-        public int SzallitasiKoltseg 
+        public int SzallitasiKoltseg
         {
-            get { return _szallitasiKoltseg; } 
-            set 
+            get { return _szallitasiKoltseg; }
+            set
             {
-                var asd = from a in tetelek
-                          select new { Nev = a.Nev , Osszeg = a.Mennyiseg * a.Ar };
-                var osszeg1 = from b in asd
-                              group b by b.Nev into c
-                              select new { Vegosszeg = c.Sum(d => d.Osszeg) };
-                              
-                var osszeg = from x in tetelek
-                             group x by x.Nev into y
-                             select new { Nev = y.Key, Osszesen = y.Sum(z => z.Ar * z.Mennyiseg) };
-                
-            } 
+                //var osszeadas = (from a in tetelek
+                //                 select new { Osszeg = a.Mennyiseg * a.Ar }).ToList();
+                //var vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
+
+                _szallitasiKoltseg = 0;
+            }
         }
 
     }

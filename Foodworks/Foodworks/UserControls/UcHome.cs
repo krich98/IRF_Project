@@ -22,7 +22,7 @@ namespace Foodworks.UserControls
             UIRajzolas();
 
         }
-        void UIRajzolas()
+         public void UIRajzolas()
         {
             int kepmeret = 100;
             
@@ -70,8 +70,8 @@ namespace Foodworks.UserControls
 
 
         }
-        void GetPizzas()
-        {
+       public void GetPizzas()
+       {
             string path = "Files/Pizzak.csv";
 
 
@@ -91,6 +91,6 @@ namespace Foodworks.UserControls
                 }
             }
 
-        }
+       }
     }
 }

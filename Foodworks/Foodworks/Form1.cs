@@ -57,7 +57,7 @@ namespace Foodworks
         private void MenuBtn_Click(object sender, EventArgs e)
         {
             UcPizza ucPizza = new UcPizza();
-            panel3.Height = ucPizza.meret;
+            //panel3.Height = ucPizza.meret;
             panel3.Controls.Clear();
             panel3.Controls.Add(ucPizza);
             ucPizza.Dock = DockStyle.Fill;

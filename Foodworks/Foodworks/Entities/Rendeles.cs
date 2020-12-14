@@ -10,9 +10,12 @@ namespace Foodworks.Entities
     class Rendeles
     {
         public static List<Tetel> tetelek = new List<Tetel>();
-        private int _szallitasiKoltseg = 0;
+        private int _szallitasiKoltseg;
+        private int vegosszeg;
         public Rendeles()
         {
+            SzallKoltsegSzamol();
+            SzallitasiKoltseg = vegosszeg;
             
         }
         public int SzallitasiKoltseg
@@ -20,12 +23,24 @@ namespace Foodworks.Entities
             get { return _szallitasiKoltseg; }
             set
             {
-                //var osszeadas = (from a in tetelek
-                //                 select new { Osszeg = a.Mennyiseg * a.Ar }).ToList();
-                //var vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
+                _szallitasiKoltseg = value;
+                if (value < 5000)
+                    _szallitasiKoltseg = value / 5;
+                else if (value > 5000 && value < 10000)
+                    _szallitasiKoltseg = value / 10;
+                else if (value >= 10000 && value < 15000)
+                    _szallitasiKoltseg = value / 20;
+                else
+                    _szallitasiKoltseg = 0;
+                 
 
-                _szallitasiKoltseg = 0;
             }
+        }
+        void SzallKoltsegSzamol()
+        {
+            var osszeadas = (from a in tetelek
+                             select new { Osszeg = a.Mennyiseg * a.Ar }).ToList();
+            vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
         }
 
     }

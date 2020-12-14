@@ -63,6 +63,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UcCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcCart.Designer.cs">
+      <DependentUpon>UcCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UcAboutUs.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +99,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\UcCart.resx">
+      <DependentUpon>UcCart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UcPizza.resx">
       <DependentUpon>UcPizza.cs</DependentUpon>
     </EmbeddedResource>

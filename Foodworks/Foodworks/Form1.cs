@@ -67,5 +67,14 @@ namespace Foodworks
         {
 
         }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            UcCart ucCart = new UcCart();
+            panel3.Controls.Clear();
+            panel3.Controls.Add(ucCart);
+            ucCart.Dock = DockStyle.Fill;
+
+        }
     }
 }

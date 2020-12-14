@@ -30,15 +30,17 @@ namespace Foodworks
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.AboutUsBtn = new Foodworks.Entities.CustomButton();
             this.MenuBtn = new Foodworks.Entities.CustomButton();
             this.HomeBtn = new Foodworks.Entities.CustomButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.customButton1 = new Foodworks.Entities.CustomButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.customButton1);
             this.panel1.Controls.Add(this.AboutUsBtn);
             this.panel1.Controls.Add(this.MenuBtn);
             this.panel1.Controls.Add(this.HomeBtn);
@@ -46,14 +48,6 @@ namespace Foodworks
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1349, 49);
             this.panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.AutoScroll = true;
-            this.panel3.Location = new System.Drawing.Point(76, 65);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1139, 511);
-            this.panel3.TabIndex = 1;
             // 
             // AboutUsBtn
             // 
@@ -109,6 +103,29 @@ namespace Foodworks
             this.HomeBtn.UseVisualStyleBackColor = false;
             this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
             // 
+            // panel3
+            // 
+            this.panel3.AutoScroll = true;
+            this.panel3.Location = new System.Drawing.Point(76, 65);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1139, 511);
+            this.panel3.TabIndex = 1;
+            // 
+            // customButton1
+            // 
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.ID = 0;
+            this.customButton1.Location = new System.Drawing.Point(1262, 0);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(87, 49);
+            this.customButton1.TabIndex = 4;
+            this.customButton1.Text = "Cart";
+            this.customButton1.UseVisualStyleBackColor = true;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -135,6 +152,7 @@ namespace Foodworks
         private Entities.CustomButton MenuBtn;
         private Entities.CustomButton HomeBtn;
         private System.Windows.Forms.Panel panel3;
+        private Entities.CustomButton customButton1;
     }
 }
 

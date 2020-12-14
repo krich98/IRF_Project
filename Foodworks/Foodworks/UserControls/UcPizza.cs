@@ -112,9 +112,14 @@ namespace Foodworks.UserControls
             ujtetel.Ar = pizzak[0].Ar;
             ujtetel.Nev = pizzak[0].Nev;
             Rendeles.tetelek.Add(ujtetel);
+            
+        }
+        public int vegosszeg()
+        {
             var osszeadas = (from a in Rendeles.tetelek
                              select new { Osszeg = a.Mennyiseg * a.Ar }).ToList();
             var vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
+            return vegosszeg;
         }
     }
 }

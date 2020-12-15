@@ -18,13 +18,20 @@ namespace Foodworks.UserControls
             InitializeComponent();
             Rendeles rendeles = new Rendeles();
 
-            var tetellista = from x in Rendeles.tetelek
+            var tetellista = (from x in Rendeles.tetelek
                              group x by x.Nev into y
-                             select new { Név = y.Key, Mennyiség = y.Sum(z => z.Mennyiseg) };
+                             select new { Név = y.Key, Mennyiség = y.Sum(z => z.Mennyiseg), Egységár = y.Average(z => z.Ar) }).ToList();
+
+            var osszeadas = (from a in Rendeles.tetelek
+                             select new { Osszeg = a.Mennyiseg * a.Ar }).ToList();
+            var vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
 
             dataGridView1.DataSource = tetellista;
 
-            label1.Text = rendeles.SzallitasiKoltseg.ToString();
+            labelOsszesen.Text = "Összesen: ";
+            labelSzallDij.Text = "Szállítáí díj:";
+            labelOsszeg.Text = (vegosszeg + rendeles.SzallitasiKoltseg).ToString();
+            labelSzallDijSzam.Text = rendeles.SzallitasiKoltseg.ToString();
         }
        
     }

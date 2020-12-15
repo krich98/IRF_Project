@@ -41,7 +41,7 @@ namespace Foodworks
             logo2.Height = 200;
             logo2.BackgroundImageLayout = ImageLayout.Stretch;
             this.Controls.Add(logo2);
-
+           
 
 
         }
@@ -50,6 +50,7 @@ namespace Foodworks
         {
             UcHome ucHome = new UcHome();
             panel3.Controls.Clear();
+            panel3.Size = ucHome.Size;
             panel3.Controls.Add(ucHome);
             ucHome.Dock = DockStyle.Fill;
         }
@@ -59,6 +60,7 @@ namespace Foodworks
             UcPizza ucPizza = new UcPizza();
             //panel3.Height = ucPizza.meret;
             panel3.Controls.Clear();
+            panel3.Size = ucPizza.Size;
             panel3.Controls.Add(ucPizza);
             ucPizza.Dock = DockStyle.Fill;
         }
@@ -71,7 +73,7 @@ namespace Foodworks
         private void customButton1_Click(object sender, EventArgs e)
         {
             UcCart ucCart = new UcCart();
-            panel3.Controls.Clear();
+            panel3.Controls.Clear();            
             panel3.Controls.Add(ucCart);
             ucCart.Dock = DockStyle.Fill;
 

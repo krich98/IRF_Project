@@ -15,7 +15,6 @@ namespace Foodworks.UserControls
     public partial class UcPizza : UserControl
     {
         List<Pizza> pizzak = new List<Pizza>();
-        List<Tetel> tetelek = new List<Tetel>();
         public int meret;
         //Rendeles rendeles = new Rendeles();
         public UcPizza()
@@ -23,6 +22,8 @@ namespace Foodworks.UserControls
             InitializeComponent();
             GetPizzas();
             //UIRajzolas();
+            PizzaPanel pizzaPanel = new PizzaPanel(0);
+            this.Controls.Add(pizzaPanel);
         }
         void GetPizzas()
         {
@@ -101,25 +102,57 @@ namespace Foodworks.UserControls
         private void customButton6_Click(object sender, EventArgs e)
         {
             Tetel ujtetel = new Tetel();
-            ujtetel.Mennyiseg = (int)numericUpDown1.Value;
+            //ujtetel.Mennyiseg = (int)numericUpDown1.Value;
+            ujtetel.Ar = pizzak[5].Ar;
+            ujtetel.Nev = pizzak[5].Nev;
+            Rendeles.tetelek.Add(ujtetel);
 
         }
 
         private void customButton1_Click(object sender, EventArgs e)
         {
             Tetel ujtetel = new Tetel();
-            ujtetel.Mennyiseg = (int)numericUpDown1.Value;
+            //ujtetel.mennyiseg = (int)numericupdown1.value;
             ujtetel.Ar = pizzak[0].Ar;
             ujtetel.Nev = pizzak[0].Nev;
             Rendeles.tetelek.Add(ujtetel);
             
         }
-        public int vegosszeg()
+
+        private void customButton2_Click(object sender, EventArgs e)
         {
-            var osszeadas = (from a in Rendeles.tetelek
-                             select new { Osszeg = a.Mennyiseg * a.Ar }).ToList();
-            var vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
-            return vegosszeg;
+            Tetel ujtetel = new Tetel();
+            //ujtetel.Mennyiseg = (int)numericUpDown1.Value;
+            ujtetel.Ar = pizzak[1].Ar;
+            ujtetel.Nev = pizzak[1].Nev;
+            Rendeles.tetelek.Add(ujtetel);
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+            Tetel ujtetel = new Tetel();
+            //ujtetel.Mennyiseg = (int)numericUpDown1.Value;
+            ujtetel.Ar = pizzak[2].Ar;
+            ujtetel.Nev = pizzak[2].Nev;
+            Rendeles.tetelek.Add(ujtetel);
+        }
+
+        private void customButton4_Click(object sender, EventArgs e)
+        {
+            Tetel ujtetel = new Tetel();
+            //ujtetel.Mennyiseg = (int)numericUpDown1.Value;
+            ujtetel.Ar = pizzak[3].Ar;
+            ujtetel.Nev = pizzak[3].Nev;
+            Rendeles.tetelek.Add(ujtetel);
+        }
+
+        private void customButton5_Click(object sender, EventArgs e)
+        {
+            Tetel ujtetel = new Tetel();
+            //ujtetel.Mennyiseg = (int)numericUpDown1.Value;
+            ujtetel.Ar = pizzak[4].Ar;
+            ujtetel.Nev = pizzak[4].Nev;
+            Rendeles.tetelek.Add(ujtetel);
         }
     }
 }

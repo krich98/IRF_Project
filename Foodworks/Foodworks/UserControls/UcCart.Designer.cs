@@ -30,12 +30,21 @@ namespace Foodworks.UserControls
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelOsszeg = new System.Windows.Forms.Label();
+            this.labelOsszesen = new System.Windows.Forms.Label();
+            this.labelSzallDij = new System.Windows.Forms.Label();
+            this.labelSzallDijSzam = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(255)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(19, 51);
             this.dataGridView1.Name = "dataGridView1";
@@ -44,20 +53,50 @@ namespace Foodworks.UserControls
             this.dataGridView1.Size = new System.Drawing.Size(594, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // label1
+            // labelOsszeg
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 233);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.labelOsszeg.AutoSize = true;
+            this.labelOsszeg.Location = new System.Drawing.Point(591, 242);
+            this.labelOsszeg.Name = "labelOsszeg";
+            this.labelOsszeg.Size = new System.Drawing.Size(16, 17);
+            this.labelOsszeg.TabIndex = 1;
+            this.labelOsszeg.Text = "0";
+            // 
+            // labelOsszesen
+            // 
+            this.labelOsszesen.AutoSize = true;
+            this.labelOsszesen.Location = new System.Drawing.Point(447, 242);
+            this.labelOsszesen.Name = "labelOsszesen";
+            this.labelOsszesen.Size = new System.Drawing.Size(101, 17);
+            this.labelOsszesen.TabIndex = 2;
+            this.labelOsszesen.Text = "labelOsszesen";
+            // 
+            // labelSzallDij
+            // 
+            this.labelSzallDij.AutoSize = true;
+            this.labelSzallDij.Location = new System.Drawing.Point(447, 225);
+            this.labelSzallDij.Name = "labelSzallDij";
+            this.labelSzallDij.Size = new System.Drawing.Size(46, 17);
+            this.labelSzallDij.TabIndex = 3;
+            this.labelSzallDij.Text = "label1";
+            // 
+            // labelSzallDijSzam
+            // 
+            this.labelSzallDijSzam.AutoSize = true;
+            this.labelSzallDijSzam.Location = new System.Drawing.Point(561, 225);
+            this.labelSzallDijSzam.Name = "labelSzallDijSzam";
+            this.labelSzallDijSzam.Size = new System.Drawing.Size(46, 17);
+            this.labelSzallDijSzam.TabIndex = 4;
+            this.labelSzallDijSzam.Text = "label2";
             // 
             // UcCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelSzallDijSzam);
+            this.Controls.Add(this.labelSzallDij);
+            this.Controls.Add(this.labelOsszesen);
+            this.Controls.Add(this.labelOsszeg);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UcCart";
             this.Size = new System.Drawing.Size(650, 364);
@@ -70,6 +109,9 @@ namespace Foodworks.UserControls
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelOsszeg;
+        private System.Windows.Forms.Label labelOsszesen;
+        private System.Windows.Forms.Label labelSzallDij;
+        private System.Windows.Forms.Label labelSzallDijSzam;
     }
 }

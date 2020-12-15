@@ -30,11 +30,11 @@ namespace Foodworks
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AboutUsBtn = new Foodworks.Entities.CustomButton();
-            this.MenuBtn = new Foodworks.Entities.CustomButton();
-            this.HomeBtn = new Foodworks.Entities.CustomButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.customButton1 = new Foodworks.Entities.CustomButton();
+            this.AboutUsBtn = new Foodworks.Entities.CustomButton();
+            this.HomeBtn = new Foodworks.Entities.CustomButton();
+            this.MenuBtn = new Foodworks.Entities.CustomButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,54 +42,57 @@ namespace Foodworks
             // 
             this.panel1.Controls.Add(this.customButton1);
             this.panel1.Controls.Add(this.AboutUsBtn);
-            this.panel1.Controls.Add(this.MenuBtn);
             this.panel1.Controls.Add(this.HomeBtn);
+            this.panel1.Controls.Add(this.MenuBtn);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1349, 49);
+            this.panel1.Size = new System.Drawing.Size(1350, 51);
             this.panel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.AutoScroll = true;
+            this.panel3.Location = new System.Drawing.Point(119, 121);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1145, 439);
+            this.panel3.TabIndex = 1;
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.ID = 0;
+            this.customButton1.Location = new System.Drawing.Point(1260, 0);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(87, 49);
+            this.customButton1.TabIndex = 4;
+            this.customButton1.Text = "Cart";
+            this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // AboutUsBtn
             // 
             this.AboutUsBtn.AutoSize = true;
             this.AboutUsBtn.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.AboutUsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AboutUsBtn.FlatAppearance.BorderSize = 0;
             this.AboutUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AboutUsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.AboutUsBtn.ForeColor = System.Drawing.Color.White;
             this.AboutUsBtn.ID = 0;
-            this.AboutUsBtn.Location = new System.Drawing.Point(900, 0);
+            this.AboutUsBtn.Location = new System.Drawing.Point(897, 0);
             this.AboutUsBtn.Name = "AboutUsBtn";
-            this.AboutUsBtn.Size = new System.Drawing.Size(449, 49);
+            this.AboutUsBtn.Size = new System.Drawing.Size(450, 50);
             this.AboutUsBtn.TabIndex = 3;
             this.AboutUsBtn.Text = "About Us";
             this.AboutUsBtn.UseVisualStyleBackColor = false;
             this.AboutUsBtn.Click += new System.EventHandler(this.AboutUsBtn_Click);
             // 
-            // MenuBtn
-            // 
-            this.MenuBtn.AutoSize = true;
-            this.MenuBtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.MenuBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MenuBtn.FlatAppearance.BorderSize = 0;
-            this.MenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.MenuBtn.ForeColor = System.Drawing.Color.White;
-            this.MenuBtn.ID = 0;
-            this.MenuBtn.Location = new System.Drawing.Point(450, 0);
-            this.MenuBtn.Name = "MenuBtn";
-            this.MenuBtn.Size = new System.Drawing.Size(450, 49);
-            this.MenuBtn.TabIndex = 2;
-            this.MenuBtn.Text = "Menu";
-            this.MenuBtn.UseVisualStyleBackColor = false;
-            this.MenuBtn.Click += new System.EventHandler(this.MenuBtn_Click);
-            // 
             // HomeBtn
             // 
-            this.HomeBtn.AutoSize = true;
             this.HomeBtn.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.HomeBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.HomeBtn.FlatAppearance.BorderSize = 0;
             this.HomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
@@ -97,34 +100,28 @@ namespace Foodworks
             this.HomeBtn.ID = 0;
             this.HomeBtn.Location = new System.Drawing.Point(0, 0);
             this.HomeBtn.Name = "HomeBtn";
-            this.HomeBtn.Size = new System.Drawing.Size(450, 49);
+            this.HomeBtn.Size = new System.Drawing.Size(450, 50);
             this.HomeBtn.TabIndex = 1;
             this.HomeBtn.Text = "Home";
             this.HomeBtn.UseVisualStyleBackColor = false;
             this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
             // 
-            // panel3
+            // MenuBtn
             // 
-            this.panel3.AutoScroll = true;
-            this.panel3.Location = new System.Drawing.Point(76, 65);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1139, 511);
-            this.panel3.TabIndex = 1;
-            // 
-            // customButton1
-            // 
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.ID = 0;
-            this.customButton1.Location = new System.Drawing.Point(1262, 0);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(87, 49);
-            this.customButton1.TabIndex = 4;
-            this.customButton1.Text = "Cart";
-            this.customButton1.UseVisualStyleBackColor = true;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            this.MenuBtn.AutoSize = true;
+            this.MenuBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.MenuBtn.FlatAppearance.BorderSize = 0;
+            this.MenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.MenuBtn.ForeColor = System.Drawing.Color.White;
+            this.MenuBtn.ID = 0;
+            this.MenuBtn.Location = new System.Drawing.Point(450, 0);
+            this.MenuBtn.Name = "MenuBtn";
+            this.MenuBtn.Size = new System.Drawing.Size(450, 50);
+            this.MenuBtn.TabIndex = 2;
+            this.MenuBtn.Text = "Menu";
+            this.MenuBtn.UseVisualStyleBackColor = false;
+            this.MenuBtn.Click += new System.EventHandler(this.MenuBtn_Click);
             // 
             // Form1
             // 
@@ -132,7 +129,7 @@ namespace Foodworks
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1347, 635);
+            this.ClientSize = new System.Drawing.Size(1350, 622);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

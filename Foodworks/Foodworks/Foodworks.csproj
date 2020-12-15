@@ -53,6 +53,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Entities\Pizza.cs" />
+    <Compile Include="Entities\PizzaPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Entities\Rendeles.cs" />
     <Compile Include="Entities\Tetel.cs" />
     <Compile Include="Form1.cs">

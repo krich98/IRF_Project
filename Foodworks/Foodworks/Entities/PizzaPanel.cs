@@ -19,14 +19,14 @@ namespace Foodworks.Entities
         {
             Sorszam = sorszam;
             GetPizzas();
-            this.Height = 202;
+            this.Height = 180;
             this.Width = 720;
 
             int kepmeret = 175;
             PictureBox pizzaPicture = new PictureBox();
             pizzaPicture.Height = kepmeret;
             pizzaPicture.Width = kepmeret;
-            pizzaPicture.Top = Sorszam * (kepmeret + 5);
+            pizzaPicture.Top = 0;
             pizzaPicture.BackgroundImage = Image.FromFile("Files/" + pizzak[Sorszam].Sorszam + ".png");
             pizzaPicture.BackgroundImageLayout = ImageLayout.Stretch;
             this.Controls.Add(pizzaPicture);
@@ -35,7 +35,7 @@ namespace Foodworks.Entities
             Label lblNev = new Label();
             lblNev.Text = pizzak[Sorszam].Nev;
             lblNev.Left = kepmeret + 30;
-            lblNev.Top = Sorszam * (kepmeret + 5);
+            lblNev.Top = 0;
             lblNev.Font = new Font("Century", 12);
             lblNev.Width = 500;
             this.Controls.Add(lblNev);
@@ -43,7 +43,7 @@ namespace Foodworks.Entities
             Label lblLeiras = new Label();
             lblLeiras.Text = "Leírás: " + pizzak[Sorszam].Leiras;
             lblLeiras.Left = kepmeret + 30;
-            lblLeiras.Top = Sorszam * (kepmeret + 5) + 30;
+            lblLeiras.Top = 30;
             lblLeiras.Font = new Font("Century", 12);
             lblLeiras.Width = 500;
             this.Controls.Add(lblLeiras);
@@ -51,7 +51,7 @@ namespace Foodworks.Entities
             Label lblAr = new Label();
             lblAr.Text = "Ár: " + pizzak[Sorszam].Ar.ToString() + " Ft";
             lblAr.Left = kepmeret + 30;
-            lblAr.Top = Sorszam * (kepmeret + 5) + 60;
+            lblAr.Top = 60;
             lblAr.Font = new Font("Century", 12);
             lblAr.Width = 500;
             this.Controls.Add(lblAr);
@@ -59,8 +59,8 @@ namespace Foodworks.Entities
             Button b = new Button();
             b.Height = 40;
             b.Width = 40;
-            b.Top = Sorszam * (kepmeret + 5) + 90;
-            b.Left = kepmeret + 90;
+            b.Top = 90;
+            b.Left =kepmeret + 90;
             b.BackgroundImage = Image.FromFile("Files/Shopping-Cart.png");
             b.BackgroundImageLayout = ImageLayout.Stretch;
             b.MouseClick += B_MouseClick;
@@ -69,7 +69,7 @@ namespace Foodworks.Entities
             nud.BackColor = Color.FromArgb(220, 220, 255);
             nud.ForeColor = Color.Black;
             nud.Left = kepmeret + 30;
-            nud.Top = Sorszam * (kepmeret + 5) + 90;
+            nud.Top = 90;
             nud.Width = 40;
             nud.Height = 40;
             this.Controls.Add(nud);
@@ -78,11 +78,17 @@ namespace Foodworks.Entities
 
         private void B_MouseClick(object sender, MouseEventArgs e)
         {
-            Tetel ujtetel = new Tetel();
-            ujtetel.Mennyiseg = (int)nud.Value;
-            ujtetel.Ar = pizzak[Sorszam].Ar;
-            ujtetel.Nev = pizzak[Sorszam].Nev;
-            Rendeles.tetelek.Add(ujtetel);
+            if (nud.Value == 0)
+                MessageBox.Show("A hozzáadott mennyiség nem lehet 0.", "KRICH' FOODWORKS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                Tetel ujtetel = new Tetel();
+                ujtetel.Mennyiseg = (int)nud.Value;
+                ujtetel.Ar = pizzak[Sorszam].Ar;
+                ujtetel.Nev = pizzak[Sorszam].Nev;
+                Rendeles.tetelek.Add(ujtetel);
+            }
+            
         }
         void GetPizzas()
         {

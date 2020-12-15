@@ -8,7 +8,18 @@ namespace Foodworks.Entities
 {
     class Pizza
     {
-        public int Sorszam { get; set; }
+        private int _sorszam;
+        public int Sorszam
+        {
+            get { return _sorszam; }
+            set
+            {
+                _sorszam = value;
+                if (_sorszam < 0)               
+                    _sorszam = 0;
+                 
+            }
+        }
         public string Nev { get; set; }
         public int Ar { get; set; }
         public string Leiras { get; set; }

@@ -16,14 +16,11 @@ namespace Foodworks.UserControls
     {
         List<Pizza> pizzak = new List<Pizza>();
         public int meret;
-        //Rendeles rendeles = new Rendeles();
         public UcPizza()
         {
             InitializeComponent();
             GetPizzas();
-            //UIRajzolas();
-            PizzaPanel pizzaPanel = new PizzaPanel(0);
-            this.Controls.Add(pizzaPanel);
+            UIRajzolas();
         }
         void GetPizzas()
         {
@@ -41,118 +38,25 @@ namespace Foodworks.UserControls
                     p.Ar = int.Parse(line[2]);
                     p.Leiras = line[3];
                     pizzak.Add(p);
-                    
-
                 }
             }
             
         }
-        //void UIRajzolas()
-        //{
-        //    int kepmeret = 175;
-        //    meret = 0;
-        //    for (int i = 0; i < pizzak.Count; i++)
-        //    {
-        //        meret += kepmeret + 20;
-        //        string picturePath = "Files/" + (i + 1).ToString() +".png";
-        //        PictureBox pbPizza = new PictureBox();
-        //        pbPizza.Left = 0;
-        //        pbPizza.Width = kepmeret;
-        //        pbPizza.Height = kepmeret;
-        //        pbPizza.Top = i * (kepmeret + 20);
-        //        pbPizza.BackgroundImage = Image.FromFile(picturePath);
-        //        pbPizza.BackgroundImageLayout = ImageLayout.Stretch;
-        //        this.Controls.Add(pbPizza);
-
-        //        Label lblNev = new Label();
-        //        lblNev.Text = pizzak[i].Nev;
-        //        lblNev.Left = kepmeret + 30;
-        //        lblNev.Top = i * (kepmeret +20);
-        //        lblNev.Font = new Font("Century", 12);
-        //        lblNev.Width = 500;
-        //        this.Controls.Add(lblNev);
-
-        //        Label lblLeiras = new Label();
-        //        lblLeiras.Text ="Leírás: " + pizzak[i].Leiras;
-        //        lblLeiras.Left = kepmeret + 30;
-        //        lblLeiras.Top = i * (kepmeret + 20) + 30;
-        //        lblLeiras.Font = new Font("Century", 12);
-        //        lblLeiras.Width = 500;
-        //        this.Controls.Add(lblLeiras);
-
-        //        Label lblAr = new Label();
-        //        lblAr.Text = "Ár: " + pizzak[i].Ar.ToString() +" Ft";
-        //        lblAr.Left = kepmeret + 30;
-        //        lblAr.Top = i * (kepmeret + 20) + 60;
-        //        lblAr.Font = new Font("Century", 12);
-        //        lblAr.Width = 500;
-        //        this.Controls.Add(lblAr);
-
-        //        CartButton btnCart = new CartButton();
-        //        btnCart.Tag = i;
-        //        btnCart.Top = i * (kepmeret + 20) + 90;
-        //        btnCart.Left = kepmeret + 30;
-        //        btnCart.ID = i;
-        //        this.Controls.Add(btnCart);
-
-
-        //    }
-        //}
-
-        private void customButton6_Click(object sender, EventArgs e)
+        void UIRajzolas()
         {
-            Tetel ujtetel = new Tetel();
-            //ujtetel.Mennyiseg = (int)numericUpDown1.Value;
-            ujtetel.Ar = pizzak[5].Ar;
-            ujtetel.Nev = pizzak[5].Nev;
-            Rendeles.tetelek.Add(ujtetel);
+            meret = 0;
+            for (int i = 0; i < pizzak.Count; i++)
+            {
+                PizzaPanel pizzaPanel = new PizzaPanel(i);
+                pizzaPanel.Top = i * (pizzaPanel.Height);
+                this.Controls.Add(pizzaPanel);
+                meret += pizzaPanel.Height;
 
-        }
-
-        private void customButton1_Click(object sender, EventArgs e)
-        {
-            Tetel ujtetel = new Tetel();
-            //ujtetel.mennyiseg = (int)numericupdown1.value;
-            ujtetel.Ar = pizzak[0].Ar;
-            ujtetel.Nev = pizzak[0].Nev;
-            Rendeles.tetelek.Add(ujtetel);
-            
-        }
-
-        private void customButton2_Click(object sender, EventArgs e)
-        {
-            Tetel ujtetel = new Tetel();
-            //ujtetel.Mennyiseg = (int)numericUpDown1.Value;
-            ujtetel.Ar = pizzak[1].Ar;
-            ujtetel.Nev = pizzak[1].Nev;
-            Rendeles.tetelek.Add(ujtetel);
-        }
-
-        private void customButton3_Click(object sender, EventArgs e)
-        {
-            Tetel ujtetel = new Tetel();
-            //ujtetel.Mennyiseg = (int)numericUpDown1.Value;
-            ujtetel.Ar = pizzak[2].Ar;
-            ujtetel.Nev = pizzak[2].Nev;
-            Rendeles.tetelek.Add(ujtetel);
-        }
-
-        private void customButton4_Click(object sender, EventArgs e)
-        {
-            Tetel ujtetel = new Tetel();
-            //ujtetel.Mennyiseg = (int)numericUpDown1.Value;
-            ujtetel.Ar = pizzak[3].Ar;
-            ujtetel.Nev = pizzak[3].Nev;
-            Rendeles.tetelek.Add(ujtetel);
-        }
-
-        private void customButton5_Click(object sender, EventArgs e)
-        {
-            Tetel ujtetel = new Tetel();
-            //ujtetel.Mennyiseg = (int)numericUpDown1.Value;
-            ujtetel.Ar = pizzak[4].Ar;
-            ujtetel.Nev = pizzak[4].Nev;
-            Rendeles.tetelek.Add(ujtetel);
+            }
+            this.Height = meret;
         }
     }
+
+
 }
+

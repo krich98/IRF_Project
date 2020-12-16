@@ -80,23 +80,32 @@ namespace Foodworks
         }
         private void LogokBetolt()
         {
-            PictureBox logo = new PictureBox();
-            logo.Left = -40;
-            logo.Top = 15;
-            logo.BackgroundImage = Image.FromFile("Files/logo_transparent.png");
-            logo.Width = 200;
-            logo.Height = 200;
-            logo.BackgroundImageLayout = ImageLayout.Stretch;
-            this.Controls.Add(logo);
+            try
+            {
+                PictureBox logo = new PictureBox();
+                logo.Left = -40;
+                logo.Top = 15;
+                logo.BackgroundImage = Image.FromFile("Files/logo_transparent.png");
+                logo.Width = 200;
+                logo.Height = 200;
+                logo.BackgroundImageLayout = ImageLayout.Stretch;
+                this.Controls.Add(logo);
 
-            PictureBox logo2 = new PictureBox();
-            logo2.Left = this.Width - 201;
-            logo2.Top = 15;
-            logo2.BackgroundImage = Image.FromFile("Files/logo_transparent.png");
-            logo2.Width = 200;
-            logo2.Height = 200;
-            logo2.BackgroundImageLayout = ImageLayout.Stretch;
-            this.Controls.Add(logo2);
+                PictureBox logo2 = new PictureBox();
+                logo2.Left = this.Width - 201;
+                logo2.Top = 15;
+                logo2.BackgroundImage = Image.FromFile("Files/logo_transparent.png");
+                logo2.Width = 200;
+                logo2.Height = 200;
+                logo2.BackgroundImageLayout = ImageLayout.Stretch;
+                this.Controls.Add(logo2);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

@@ -24,22 +24,31 @@ namespace Foodworks.UserControls
         }
         void GetPizzas()
         {
-            string path = "Files/Pizzak.csv";
-            
-            
-            using (StreamReader sr = new StreamReader(path, Encoding.Default))
+            try
             {
-                while (!sr.EndOfStream)
+                string path = "Files/Pizzak.csv";
+
+
+                using (StreamReader sr = new StreamReader(path, Encoding.Default))
                 {
-                    var line = sr.ReadLine().Split(';');
-                    Pizza p = new Pizza();
-                    p.Sorszam = int.Parse(line[0]);
-                    p.Nev = line[1];
-                    p.Ar = int.Parse(line[2]);
-                    p.Leiras = line[3];
-                    pizzak.Add(p);
+                    while (!sr.EndOfStream)
+                    {
+                        var line = sr.ReadLine().Split(';');
+                        Pizza p = new Pizza();
+                        p.Sorszam = int.Parse(line[0]);
+                        p.Nev = line[1];
+                        p.Ar = int.Parse(line[2]);
+                        p.Leiras = line[3];
+                        pizzak.Add(p);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
             
         }
         void UIRajzolas()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Foodworks.Entities
 {
@@ -38,9 +39,18 @@ namespace Foodworks.Entities
         }
         void SzallKoltsegSzamol()
         {
-            var osszeadas = (from a in tetelek
-                             select new { Osszeg = a.Mennyiseg * a.Ar }).ToList();
-            vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
+            try
+            {
+                var osszeadas = (from a in tetelek
+                                 select new { Osszeg = a.Mennyiseg * a.Ar }).ToList();
+                vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
     }

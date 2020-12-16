@@ -70,7 +70,7 @@ namespace Foodworks.UserControls
             // 
             this.labelOsszeg.AutoSize = true;
             this.labelOsszeg.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelOsszeg.Location = new System.Drawing.Point(361, 295);
+            this.labelOsszeg.Location = new System.Drawing.Point(373, 328);
             this.labelOsszeg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOsszeg.Name = "labelOsszeg";
             this.labelOsszeg.Size = new System.Drawing.Size(19, 20);
@@ -81,7 +81,7 @@ namespace Foodworks.UserControls
             // 
             this.labelOsszesen.AutoSize = true;
             this.labelOsszesen.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelOsszesen.Location = new System.Drawing.Point(241, 295);
+            this.labelOsszesen.Location = new System.Drawing.Point(253, 328);
             this.labelOsszesen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOsszesen.Name = "labelOsszesen";
             this.labelOsszesen.Size = new System.Drawing.Size(125, 20);
@@ -92,7 +92,7 @@ namespace Foodworks.UserControls
             // 
             this.labelSzallDij.AutoSize = true;
             this.labelSzallDij.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSzallDij.Location = new System.Drawing.Point(241, 279);
+            this.labelSzallDij.Location = new System.Drawing.Point(253, 312);
             this.labelSzallDij.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSzallDij.Name = "labelSzallDij";
             this.labelSzallDij.Size = new System.Drawing.Size(60, 20);
@@ -103,7 +103,7 @@ namespace Foodworks.UserControls
             // 
             this.labelSzallDijSzam.AutoSize = true;
             this.labelSzallDijSzam.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSzallDijSzam.Location = new System.Drawing.Point(361, 279);
+            this.labelSzallDijSzam.Location = new System.Drawing.Point(373, 312);
             this.labelSzallDijSzam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSzallDijSzam.Name = "labelSzallDijSzam";
             this.labelSzallDijSzam.Size = new System.Drawing.Size(60, 20);

@@ -53,6 +53,7 @@ namespace Foodworks.UserControls
                     labelOsszesen.Text = "Összesen: ";
                     labelSzallDij.Text = "Szállítáí díj:";
                     labelOsszeg.Text = (vegosszeg + rendeles.SzallitasiKoltseg).ToString() + " Ft";
+
                     labelSzallDijSzam.Text = rendeles.SzallitasiKoltseg.ToString() + " Ft";
                 }
                 else 

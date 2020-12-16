@@ -11,7 +11,8 @@ namespace Foodworks.Entities
 {
     class CustomButton : Button
     {
-        public int ID { get; set; }
+        private int _id;
+        
         public CustomButton(Color color)
         {
             FlatStyle = FlatStyle.Flat;
@@ -25,7 +26,23 @@ namespace Foodworks.Entities
             FlatAppearance.BorderSize = 0;
             ForeColor = Color.White;
         }
-        
-        
+        public int ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+                if(_id < 0 )
+                {
+                    _id = 0;
+                }
+                
+            }
+        }
+
+
     }
 }

@@ -49,6 +49,7 @@ namespace Foodworks
         {
             UcHome ucHome = new UcHome();
             panel3.Controls.Clear();
+            
             panel3.Controls.Add(ucHome);
             ucHome.Dock = DockStyle.Fill;
         }
@@ -65,6 +66,12 @@ namespace Foodworks
 
         private void AboutUsBtn_Click(object sender, EventArgs e)
         {
+            UcAboutUs ucAbout = new UcAboutUs();
+            panel3.Controls.Clear();
+            panel3.Size = ucAbout.Size;
+            panel3.Left = (this.Width - ucAbout.Width) / 2;
+            panel3.Controls.Add(ucAbout);
+            ucAbout.Dock = DockStyle.Fill;
 
         }
 

@@ -19,14 +19,15 @@ namespace Foodworks.UserControls
         {
             InitializeComponent();
             GetPizzas();
-            UIRajzolas();
+            PizzakRajzolas();
+            Labelek();
 
         }
-         public void UIRajzolas()
+        private void PizzakRajzolas()
         {
             int kepmeret = 100;
             
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < pizzak.Count; i++)
             {
                
                 string picturePath = "Files/" + (i + 1).ToString() + ".png";
@@ -48,6 +49,9 @@ namespace Foodworks.UserControls
                 this.Controls.Add(lblPizza);
             }
 
+        }
+        private void Labelek()
+        {
             Label lblCim = new Label();
             lblCim.Text = "KRICH'S FOODWORKS";
             lblCim.Left = 100;
@@ -68,9 +72,18 @@ namespace Foodworks.UserControls
             lblMotto.ForeColor = Color.FromArgb(100, 100, 255);
             this.Controls.Add(lblMotto);
 
+            Label lblEtelek = new Label();
+            lblEtelek.Text = "Ételeink:";
+            lblEtelek.Font = new Font("Century", 25);
+            lblEtelek.Top = lblMotto.Top + 50;
+            lblEtelek.Left = 220;
+            lblEtelek.Height = 50;
+            lblEtelek.Width = 500;
+            this.Controls.Add(lblEtelek);
+
 
         }
-       public void GetPizzas()
+       private void GetPizzas()
        {
             string path = "Files/Pizzak.csv";
 

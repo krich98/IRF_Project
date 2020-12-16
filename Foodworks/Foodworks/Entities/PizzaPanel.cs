@@ -130,6 +130,7 @@ namespace Foodworks.Entities
                 nud.Top = 90;
                 nud.Width = 40;
                 nud.Height = 40;
+                nud.Value = 1;
                 this.Controls.Add(nud);
             }
             catch(Exception ex)

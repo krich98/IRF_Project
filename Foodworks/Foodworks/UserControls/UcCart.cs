@@ -51,7 +51,8 @@ namespace Foodworks.UserControls
                     dataGridView1.DataSource = tetellista;
 
                     labelOsszesen.Text = "Összesen: ";
-                    labelSzallDij.Text = "Szállítáí díj:";
+                    double szallDijSzazalek = ((double)rendeles.SzallitasiKoltseg / (double)vegosszeg) * 100;
+                    labelSzallDij.Text = "Szállításí díj(" + szallDijSzazalek.ToString() + "%):";
                     labelOsszeg.Text = (vegosszeg + rendeles.SzallitasiKoltseg).ToString() + " Ft";
 
                     labelSzallDijSzam.Text = rendeles.SzallitasiKoltseg.ToString() + " Ft";
@@ -71,6 +72,7 @@ namespace Foodworks.UserControls
                     textBoxTel.Visible = false;
                     dataGridView1.Visible = false;
                     customButton2.Visible = false;
+                    customButton3.Visible = false;
 
                     labelKosar.Top = 100;
                     labelKosar.AutoSize = true;
@@ -221,6 +223,19 @@ namespace Foodworks.UserControls
         {
             KosarUrites();
             TetelekOsszesit();
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+            if (!label1.Visible)
+            {
+                label1.Visible = true;
+            }
+            else
+            {
+                label1.Visible = false;
+            }
+            
         }
     }
 }

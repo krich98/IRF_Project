@@ -86,7 +86,7 @@ namespace Foodworks.UserControls
             this.label1.Font = new System.Drawing.Font("Centaur", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(63, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(510, 126);
+            this.label1.Size = new System.Drawing.Size(504, 126);
             this.label1.TabIndex = 4;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;

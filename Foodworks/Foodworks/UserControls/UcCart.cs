@@ -44,10 +44,7 @@ namespace Foodworks.UserControls
                                   group x by x.Nev into y
                                   select new { Név = y.Key, Mennyiség = y.Sum(z => z.Mennyiseg), Egységár = y.Average(z => z.Ar) }).ToList();
 
-                    var osszeadas = (from a in Rendeles.tetelek
-                                     select new { Osszeg = a.Mennyiseg * a.Ar }).ToList();
-                    vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
-
+                    vegosszeg = rendeles.Osszeg;
                     dataGridView1.DataSource = tetellista;
 
                     labelOsszesen.Text = "Összesen: ";

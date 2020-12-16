@@ -15,8 +15,9 @@ namespace Foodworks.Entities
         private int vegosszeg;
         public Rendeles()
         {
-            SzallKoltsegSzamol();
+            OsszegSzamolas();
             SzallitasiKoltseg = vegosszeg;
+            Osszeg = vegosszeg;
             
         }
         public int SzallitasiKoltseg
@@ -37,7 +38,8 @@ namespace Foodworks.Entities
 
             }
         }
-        void SzallKoltsegSzamol()
+        public int Osszeg { get { return vegosszeg; } set { vegosszeg = value; } }
+        private void OsszegSzamolas()
         {
             try
             {

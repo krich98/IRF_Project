@@ -19,6 +19,7 @@ namespace Foodworks.UserControls
         Excel.Workbook xlWB; 
         Excel.Worksheet xlSheet;
         dynamic tetellista;
+        int vegosszeg;
         
         public UcCart()
         {
@@ -45,7 +46,7 @@ namespace Foodworks.UserControls
 
                     var osszeadas = (from a in Rendeles.tetelek
                                      select new { Osszeg = a.Mennyiseg * a.Ar }).ToList();
-                    var vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
+                    vegosszeg = (from x in osszeadas select x.Osszeg).Sum();
 
                     dataGridView1.DataSource = tetellista;
 
@@ -89,7 +90,7 @@ namespace Foodworks.UserControls
                 xlSheet.Cells[1, 1] = "Nyugta";
                 xlSheet.Range[xlSheet.Cells[1, 1], xlSheet.Cells[1, 3]].Merge();
 
-                string[] headers = new string[] { "Név", "Mennyiség", "Egységár" };
+                string[] headers = new string[] { "Név", "Mennyiség", "Egységár(Ft)" };
                 for (int i = 0; i < headers.Length; i++)
                 {
                     xlSheet.Cells[2, i + 1] = headers[i];
@@ -114,6 +115,22 @@ namespace Foodworks.UserControls
                 tetelekRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
                 tetelekRange.EntireColumn.AutoFit();
 
+                Rendeles r = new Rendeles();
+
+                object[,] osszesites = new object[2, 3];
+
+                osszesites[1, 0] = "Összesen:";
+                osszesites[0, 0] = "Szállítási díj:";
+                osszesites[0, 2] = r.SzallitasiKoltseg;
+                osszesites[1, 2] = vegosszeg + r.SzallitasiKoltseg;
+
+                int lastRowID = xlSheet.UsedRange.Rows.Count;
+
+                Excel.Range osszesitesRange = xlSheet.get_Range(GetCell(lastRowID + 1, 1), GetCell(lastRowID + osszesites.GetLength(0) , osszesites.GetLength(1)));
+                osszesitesRange.Value2 = osszesites;
+                osszesitesRange.Font.Bold = true;
+                osszesitesRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThin);
+
                 Excel.Range TitleRange = xlSheet.get_Range(GetCell(1, 1), GetCell(1, headers.Length));
                 TitleRange.Font.Bold = true;
                 TitleRange.Font.Size = 20;
@@ -132,7 +149,7 @@ namespace Foodworks.UserControls
                 headerRange.RowHeight = 20;
                 headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlMedium);
 
-                int lastRowID = xlSheet.UsedRange.Rows.Count;
+                lastRowID = xlSheet.UsedRange.Rows.Count;
                 Excel.Range teljesRange = xlSheet.get_Range(GetCell(1, 1), GetCell(lastRowID, headers.Length));
                 teljesRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
 

@@ -15,7 +15,7 @@ namespace Foodworks.UserControls
     public partial class UcPizza : UserControl
     {
         List<Pizza> pizzak = new List<Pizza>();
-        public int meret;
+        private int meret;
         public UcPizza()
         {
             InitializeComponent();

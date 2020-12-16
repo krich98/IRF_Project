@@ -22,10 +22,12 @@ namespace Foodworks.UserControls
             PizzakRajzolas();
             Labelek();
 
+
         }
         private void PizzakRajzolas()
         {
             int kepmeret = 100;
+            int szelesseg = 0;
             
             for (int i = 0; i < pizzak.Count; i++)
             {
@@ -35,7 +37,7 @@ namespace Foodworks.UserControls
                 pbPizza.Left = i*(kepmeret+10);
                 pbPizza.Width = kepmeret;
                 pbPizza.Height = kepmeret;
-                pbPizza.Top = 200;
+                pbPizza.Top = 180;
                 pbPizza.BackgroundImage = Image.FromFile(picturePath);
                 pbPizza.BackgroundImageLayout = ImageLayout.Stretch;
                 this.Controls.Add(pbPizza);
@@ -47,7 +49,9 @@ namespace Foodworks.UserControls
                 lblPizza.Width = kepmeret;
                 lblPizza.Font = new Font("Century", 8);
                 this.Controls.Add(lblPizza);
+                szelesseg += kepmeret + 10;
             }
+            this.Width = szelesseg;
 
         }
         private void Labelek()
@@ -81,7 +85,20 @@ namespace Foodworks.UserControls
             lblEtelek.Width = 500;
             this.Controls.Add(lblEtelek);
 
-
+            Label lblContact = new Label();
+            lblContact.Text = "Nyitvatartás: H-V 0-24\n" +
+                "Cím: 1111 Budapest, Pizza utca 1.\n" +
+                "E-mail: krichfoodworks@krichfoodworks.com\n" +
+                "Tel: +36-1-123-4567\n" +
+                "Jelenleg üzletünkben csak elvitelre van lehetőség, illetve házhoz szállítást is vállalunk!";
+            lblContact.TextAlign = ContentAlignment.TopCenter;
+            lblContact.Top = 305;
+            lblContact.Left = 0;
+            lblContact.Width = 600;
+            lblContact.Height = 140;
+            lblContact.Font = new Font("Century", 14);
+            this.Controls.Add(lblContact);
+            this.Height = lblContact.Top + lblContact.Height +5;
         }
        private void GetPizzas()
        {

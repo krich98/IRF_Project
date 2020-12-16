@@ -56,7 +56,7 @@ namespace Foodworks.Entities
             lblAr.Width = 500;
             this.Controls.Add(lblAr);
 
-            Button b = new Button();
+            CustomButton b = new CustomButton();
             b.Height = 40;
             b.Width = 40;
             b.Top = 90;

@@ -62,14 +62,21 @@ namespace Foodworks.UserControls
                     labelSzallDij.Visible = false;
                     labelSzallDijSzam.Visible = false;
                     customButton1.Visible = false;
+                    labelCim.Visible = false;
+                    labelNev.Visible = false;
+                    labelTel.Visible = false;
+                    textBoxCim.Visible = false;
+                    textBoxNev.Visible = false;
+                    textBoxTel.Visible = false;
+                    dataGridView1.Visible = false;
+                    customButton2.Visible = false;
 
-                    Label ures = new Label();
-                    ures.Text = "A kosarad üres.";
-                    ures.Top = this.Height / 2 +50;
-                    ures.Font = new Font("Century", 30);
-                    ures.Width = 1000;
-                    ures.Height = 500;
-                    this.Controls.Add(ures);
+                    labelKosar.Top = 100;
+                    labelKosar.AutoSize = true;
+                    labelKosar.Text = "A\n" +
+                        "kosarad\n" +
+                        "üres.";
+                    labelKosar.TextAlign = ContentAlignment.TopCenter;
                 }
             }
             catch(Exception ex)
@@ -184,10 +191,35 @@ namespace Foodworks.UserControls
 
             return ExcelCoordinate;
         }
+        private void KosarUrites()
+        {
+            DialogResult dr = MessageBox.Show("Biztosan törölni akarod a kosár tartalmát?", "KRICH'S FOODWORKS", MessageBoxButtons.YesNo);
+            if(dr == DialogResult.Yes)
+            {
+                Rendeles.tetelek.Clear();
+            }
+        }
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            CreateTable();
+            if (textBoxCim.Text!= "" && textBoxNev.Text!= "" && textBoxTel.Text!= "")
+            {
+                CreateTable();
+                MessageBox.Show("Rendelésed rögzítettük.", "KRICH'S FOODWORKS");
+                Rendeles.tetelek.Clear();
+                TetelekOsszesit();
+            }
+            else
+            {
+                MessageBox.Show("Kérlek add meg az adataidat.","KRICH'S FOODWORKS");
+            }
+            
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            KosarUrites();
+            TetelekOsszesit();
         }
     }
 }
